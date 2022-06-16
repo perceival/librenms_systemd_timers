@@ -1,0 +1,13 @@
+# /etc/systemd/system/librenms-poller.service
+
+[Unit]
+Description=Run librenms poller
+
+[Service]
+Type=oneshot
+ExecStart=/opt/librenms/discovery.php -h new >> /dev/null 2>&1
+ExecStart=/opt/librenms/poll-billing.php >> /dev/null 2>&
+ExecStart=/opt/librenms/cronic /opt/librenms/poller-wrapper.py 16
+ExecStart=/opt/librenms/check-services.php >> /dev/null 2>&1
+
+User=librenms

@@ -1,0 +1,11 @@
+# /etc/systemd/system/librenms-poller.timer
+
+[Unit]
+Description=Run librenms poller every 5 minutes
+
+[Timer]
+OnCalendar=*:0/5
+Unit=librenms-every5mins.service
+
+[Install]
+WantedBy=default.target

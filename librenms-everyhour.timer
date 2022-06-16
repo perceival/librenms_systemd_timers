@@ -1,0 +1,11 @@
+# /etc/systemd/system/librenms-alerts.timer
+
+[Unit]
+Description=Run librenms alerts every 1 hour
+
+[Timer]
+OnCalendar=*-*-* *:00:00
+Unit=librenms-everyhour.service
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,11 @@
+# /etc/systemd/system/librenms-alerts.service
+
+[Unit]
+Description=Run librenms tasks in 1 hour intervals
+
+[Service]
+Type=oneshot
+ExecStart=/opt/librenms/alerts.php >> /dev/null 2>&1
+ExecStart=cd /opt/librenms/ && php artisan schedule:run >> /dev/null 2>&1
+
+User=librenms

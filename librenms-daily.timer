@@ -1,0 +1,14 @@
+# Daily maintenance script. DO NOT DISABLE!
+# If you want to modify updates:
+#  Switch to monthly stable release: https://docs.librenms.org/General/Releases/
+#  Disable updates: https://docs.librenms.org/General/Updating/
+
+[Unit]
+Description=Run librenms alerts every day
+
+[Timer]
+OnCalendar=*-*-* 0:15:00
+Unit=librenms-daily.service
+
+[Install]
+WantedBy=default.target

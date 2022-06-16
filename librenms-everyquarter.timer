@@ -1,0 +1,11 @@
+# /etc/systemd/system/librenms-alerts.timer
+
+[Unit]
+Description=Run librenms tasks every 15 minutes
+
+[Timer]
+OnCalendar=*:0/15
+Unit=librenms-everyquarter.service
+
+[Install]
+WantedBy=default.target
