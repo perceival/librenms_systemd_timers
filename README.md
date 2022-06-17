@@ -6,7 +6,8 @@ move to /etc/systemd/system and run
 
 <p>  # systemctl daemon-reload</p>
 <p>  # systemctl enable --now librenms-daily.timer</p>
-<p>  # systemctl enable --now librenms-every5mins.timer#\ systemctl enable --now librenms-every6thhr.timer</p>
+<p>  # systemctl enable --now librenms-every5mins.timer</p>
+<p>  # systemctl enable --now librenms-every6thhr.timer</p>
 <p>  # systemctl enable --now librenms-everyhour.timer</p>
 <p>  # systemctl enable --now librenms-everymin.timer</p>
 <p>  # systemctl enable --now librenms-everyquarter.timer</p>
